@@ -202,7 +202,7 @@ document.getElementById("logoutBtn").addEventListener("click", () => {
             signOut(auth)
                 .then(() => {
                     showSuccess("Logged Out", "You have been successfully logged out.");
-                    window.location.href = "/index.html";
+                    window.location.href = "./index.html";
                 })
                 .catch((error) => {
                     console.error("Logout error:", error);
