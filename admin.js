@@ -158,7 +158,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     } catch (error) {
         console.error("Authentication error:", error);
         showError("Access Denied", "Please log in to access the admin dashboard.");
-        setTimeout(() => window.location.href = "/index.html", 2000);
+        setTimeout(() => window.location.href = "./index.html", 2000);
     }
 });
 
@@ -263,7 +263,7 @@ document.getElementById("logoutBtn").addEventListener("click", () => {
             signOut(auth)
                 .then(() => {
                     showSuccess("Logged Out", "You have been successfully logged out.");
-                    window.location.href = "/index.html";
+                    window.location.href = "./index.html";
                 })
                 .catch((error) => {
                     console.error("Logout error:", error);
