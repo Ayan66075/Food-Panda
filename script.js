@@ -193,18 +193,18 @@ document.getElementById("signupBtn").addEventListener("click", async () => {
             frontPage.style.opacity = "1";
             frontPage.style.pointerEvents = "auto";
             if (currentRole === "admin") {
-                window.location.href = '/admin.html';
+                window.location.href = './admin.html';
             } else {
-                window.location.href = '/menu.html';
+                window.location.href = './menu.html';
             }
         });
 
 if (currentRole === "admin") {
-            window.location.href = '/admin.html';
+            window.location.href = './admin.html';
 }
 
 else {
-            window.location.href = '/menu.html';
+            window.location.href = './menu.html';
 }
         
 
@@ -243,12 +243,12 @@ document.getElementById("loginBtn").addEventListener("click", async () => {
             frontPage.style.opacity = "1";
             frontPage.style.pointerEvents = "auto";
             if (role === "admin") {
-                window.location.href = '/admin.html';
+                window.location.href = './admin.html';
             } else if (role === "user") {
-                window.location.href = '/menu.html';
+                window.location.href = './menu.html';
             } else {
                 console.warn("Invalid role detected:", role);
-                window.location.href = '/menu.html';
+                window.location.href = './menu.html';
             }
         });
     } catch (error) {
