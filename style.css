@@ -295,6 +295,7 @@
      justify-content: center;
      margin-top: 32px;
      width: 100%;
+  background-color: white;
  }
 
  .cont-4-content {
@@ -315,6 +316,7 @@
      background-position: 50%;
      background-repeat: no-repeat;
      background-size: cover;
+  background-color: white;
      height: 430px;
      object-fit: cover;
      width: 100%;
@@ -368,6 +370,7 @@
 
  /* Container-7 */
  .cont-7 {
+  background-color: white;
      display: flex;
      align-items: center;
      justify-content: center;
@@ -522,6 +525,7 @@
 
  /* container-8 */
  .cont-8 {
+  background-color: white;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -608,6 +612,7 @@
   
  /* Container-10 */
  .cont-10 {
+  background-color: white;
      display: flex;
      align-items: center;
      justify-content: center;
