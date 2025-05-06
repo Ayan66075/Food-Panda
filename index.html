@@ -1,0 +1,383 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="foodpanda-logo.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon"> -->
+    <title>Food & Grocery Delivery - Restaurants near me in Pakistan | foodpanda</title>
+    <style>
+        .swal2-container {
+  z-index: 10000 !important;
+}
+    </style>
+</head>
+<body>
+    <!-- SignUp -->
+    <div class="cont" id="signup-container" style="display: none;">
+        <div class="auth-card-signup">
+            <span class="close-popup" data-target="signup-container"><img src="https://cdn2.vectorstock.com/i/1000x1000/96/16/cross-mark-black-glyph-ui-icon-vector-43339616.jpg" alt=""></span>
+            <form class="auth-form">
+                <h1>Welcome!</h1>
+                <div class="input-group">
+                    <label for="su-name">Name</label>
+                    <input type="text" id="su-name" placeholder="Enter your Name" required>
+                </div>
+                <div class="input-group">
+                    <label for="su-email">Email</label>
+                    <input type="email" id="su-email" placeholder="Enter your email" required>
+                </div>
+                <div class="input-group">
+                    <label for="su-password">Password</label>
+                    <div class="pass-hidden">
+                        <input type="password" id="su-password" placeholder="Enter your password" required>
+                    </div>
+                </div>
+                <button type="button" id="signupBtn" class="primary-btn">Sign Up</button>
+            </form>
+            <p class="switch-auth">
+                Already have an account? <a href="#" class="switch-form" data-target="login-container">Sign In</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Login -->
+    <div class="cont" id="login-container" style="display: none;">
+        <div class="auth-card">
+            <span class="close-popup" data-target="login-container"><img src="https://cdn2.vectorstock.com/i/1000x1000/96/16/cross-mark-black-glyph-ui-icon-vector-43339616.jpg" alt=""></span>
+            <form class="auth-form">
+                <h1>Welcome!</h1>
+                <div class="input-group">
+                    <label for="li-email">Email</label>
+                    <input type="email" id="li-email" placeholder="Enter your email" required>
+                </div>
+                <div class="input-group">
+                    <label for="li-password">Password</label>
+                    <div class="pass-hidden">
+                        <input type="password" id="li-password" placeholder="Enter your password" required>
+                    </div>
+                </div>
+                <button type="button" id="loginBtn" class="primary-btn">Log In</button>
+            </form>
+            <p class="switch-auth">
+                Don't have an account? <a href="#" class="switch-form" data-target="signup-container">Sign Up</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="FrontPage">
+        <!-- Container-1 -->
+        <header class="cont-1">
+            <div class="cont-1-content">
+                <img src="https://micro-assets.foodora.com/img/ic-rider-icon.svg" class="bag-img">
+                <h3>Do you need Business Account?</h3>
+                <button id="admin-signup-btn">Sign Up </button>
+                <img src="https://6807b06cfc1f2708ebecfe3f--huzi-foodpoint.netlify.app/images/close%20btn.svg" class="close-logo">
+            </div>
+        </header>
+
+        <!-- Container-2 -->
+        <nav class="cont-2" id="navbarShadow">
+            <div class="nav">
+                <div class="Foodpanda-logo">
+                    <img style="border-radius: 8px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf71T5iisdx7foaXb8GtDjiE6Wy0WrBXl-lg&s">
+                    <a style="color: #ff2b85;" href='/'>food panda</a>
+                </div>
+                <div class="nav-right">
+                    <div class="login">
+                        <button class="log-in-btn">Log in</button>
+                    </div>
+                    <div class="signup">
+                        <button class="sign-up-btn" id="signupBtn" disabled="true"> Sign Up</button>
+                    </div>
+                    <div class="cart">
+                        <a href='./cart.html'><img src="https://6807b06cfc1f2708ebecfe3f--huzi-foodpoint.netlify.app/images/carticon.svg"></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Container-3 -->
+        <section class="cont-3">
+            <div class="cont-3-main">
+                <div class="cont-3-content">
+                    <div class="cont-3-text-content">
+                        <h1>Enjoy <span id="autowriting" style="color: #ff2b85"></span></h1>
+                    </div>
+                    <div class="panda-img">
+                        <img src="https://images.deliveryhero.io/image/foodpanda/homepage/refresh-hero-home-pk.png?width=1920" >
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Container-4 -->
+        <section class="cont-4">
+            <div class="cont-4-content">
+                <h1>You prepare the food, we handle the rest</h1>
+            </div>
+        </section>
+
+        <!-- Container-5 -->
+        <section class="cont-5">
+            <div class="cont-5-content">
+                <div class="cont-5-text-content">
+                    <h2>List your restaurant or shop on foodpanda</h2>
+                    <br>
+                    <p>Would you like millions of new customers to enjoy your amazing food and groceries? So would we!</p>
+                    <p>It's simple: we list your menu and product lists online, help you process orders, pick them up, and deliver them to hungry pandas – in a heartbeat!</p>
+                    <p>Interested? Let's start our partnership today!</p>
+                    <button class="started-btn">Get Started</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Container-6 -->
+        <section class="cont-4">
+            <div class="cont-4-content">
+                <h1>Put us in your pocket</h1>
+            </div>
+        </section>
+
+        <!-- Container-7 -->
+        <section class="cont-7">
+            <div class="cont-7-main">
+                <div class="app-icon-section">
+                    <h2>Download the food and groceries you love</h2>
+                    <div class="app-section-QR-Code">
+                        <div class="QR-Code">
+                            <img src="https://foodpanda-aashir.netlify.app/images/pkhomepageqrcode.png">
+                        </div>
+                        <p>It's all at your fingertips – the restaurants and shops you love. Find the right food and groceries to suit your mood, and make the first bite last. Go ahead, download us.</p>
+                    </div>
+                    <div class="app-section-icon">
+                        <a target="_blank" href="https://apps.apple.com/us/app/foodpanda-food-groceries/id758103884"><img src="https://foodpanda-aashir.netlify.app/images/app.strore.svg"></a>
+                        <a target="_blank" href="https://play.google.com/store/apps/details?id=com.global.foodpanda.android&referrer=adjust_reftag%3Dcxg0RSVLtptcQ%26utm_source%3DWebsite%26utm_campaign%3Dpk_homepage_android"><img src="https://foodpanda-aashir.netlify.app/images/googleplay.svg"></a>
+                        <a target="_blank" href="https://appgallery.huawei.com/#/app/C101812091"><img src="https://foodpanda-aashir.netlify.app/images/explore.svg"></a>
+                    </div>
+                </div>
+                <div class="app-phone-section">
+                    <div class="app-phone">
+                        <img src="https://images.deliveryhero.io/image/foodpanda/home-foodpanda-apps.png?width=1264&height=1004.88">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <br>
+        
+         <!-- container-8 -->
+         <section class="cont-8">
+            <div class="cont-8-content">
+                <h1>Find us in these cities and many more!</h1>
+            </div>
+        </section>
+
+        <!-- container-9 -->
+         <section>
+            <div class="main-9">
+            <div class="card-container">
+    
+                <div class="card">
+                  <div class="image-container">
+                    <img src="https://media.istockphoto.com/id/535695503/photo/pakistan-monument-islamabad.jpg?s=612x612&w=0&k=20&c=bNqjdf8L-5igcRB89DdMgx0kNOmyeo1J_zzXmoxxl8w=" alt="Islamabad">
+                  </div>
+                  <hr>
+                  <button class="city-button">Islamabad</button>
+                </div>
+            
+                <div class="card">
+                  <div class="image-container">
+                    <img src="https://lp-cms-production.imgix.net/2019-06/e760d031e4eb8975c8dad63de090ae34-quaid-i-azam-mausoleum.jpg" alt="Karachi">
+                  </div>
+                  <hr>
+                  <button class="city-button">Karachi</button>
+                </div>
+            
+                <div class="card">
+                  <div class="image-container">
+                    <img src="https://akm-img-a-in.tosshub.com/sites/rd/resources/201908/lahore_1566551840_1200x675.png?size=684:384" alt="Lahore">
+                  </div>
+                  <hr>
+                  <button class="city-button">Lahore</button>
+                </div>
+            
+                <div class="card">
+                  <div class="image-container">
+                    <img src="https://www.laurewanders.com/wp-content/uploads/2024/09/Things-to-do-in-Rawalpindi-010.jpg" alt="Rawalpindi">
+                  </div>
+                  <hr>
+                  <button class="city-button">Rawalpindi</button>
+                </div>
+            
+                <div class="card">
+                  <div class="image-container">
+                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/51/41/67/caption.jpg?w=300&h=300&s=1" alt="Abbottabad">
+                  </div>
+                  <hr>
+                  <button class="city-button">Abbottabad</button>
+                </div>
+            
+                <div class="card">
+                  <div class="image-container">
+                    <img src="https://res.cloudinary.com/www-travelpakistani-com/image/upload/v1661521510/Abbasi_Mosque_travelpakistani.jpg" alt="Bahawalpur">
+                  </div>
+                  <hr>
+                  <button class="city-button">Bahawalpur</button>
+                </div>
+            
+                <div class="card">
+                  <div class="image-container">
+                    <img src="https://customstoday.media/wp-content/uploads/2014/10/Multan-customs.jpg" alt="Dera Ghazi Khan">
+                  </div>
+                  <hr>
+                  <button class="city-button">Dera Ghazi Khan</button>
+                </div>
+            
+                <div class="card">
+                  <div class="image-container">
+                    <img src="https://cometinsure.com/blog/wp-content/uploads/2024/06/9-Worth-Visiting-Places-in-Faisalabad-copy-resized.jpg" alt="Faisalabad">
+                  </div>
+                  <hr>
+                  <button class="city-button">Faisalabad</button>
+                </div>
+            
+                <div class="card">
+                  <div class="image-container">
+                    <img src="https://cometinsure.com/blog/wp-content/uploads/2024/10/Ghanta-Ghar.jpg" alt="Gujranwalan">
+                  </div>
+                  <hr>
+                  <button class="city-button">Gujranwalan</button>
+                </div>
+            
+                <div class="card">
+                  <div class="image-container">
+                    <img src="https://dreamvistatours.com/wp-content/uploads/2021/09/HYDERABAD-The-City-of-Pearls-1500x600.jpg" alt="Hyderabad">
+                  </div>
+                  <hr>
+                  <button class="city-button">Hyderabad</button>
+                </div>
+            
+                <div class="card">
+                  <div class="image-container">
+                    <img src="https://cdn-blog.zameen.com/blog/wp-content/uploads/2019/04/cover-image-25.jpg" alt="Jhelum">
+                  </div>
+                  <hr>
+                  <button class="city-button">Jhelum</button>
+                </div>
+            
+                <div class="card">
+                  <div class="image-container">
+                    <img src="https://t4.ftcdn.net/jpg/04/28/54/97/360_F_428549762_qBPU3wnJIDMlBJU20cOiqwJZrAW9ZU4G.jpg" alt="Larkana">
+                  </div>
+                  <hr>
+                  <button class="city-button">Larkana</button>
+                </div>
+            
+                <div class="card">
+                  <div class="image-container">
+                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/69/67/5e/rohtas-fort.jpg?w=400&h=300&s=1" alt="Mangla">
+                  </div>
+                  <hr>
+                  <button class="city-button">Mangla</button>
+                </div>
+            
+                <div class="card">
+                  <div class="image-container">
+                    <img src="https://blog.punjabads.pk/wp-content/uploads/2022/02/Top-10-Restaurants-in-Mardan-1200x900.jpg" alt="Mardan">
+                  </div>
+                  <hr>
+                  <button class="city-button">Mardan</button>
+                </div>
+            
+                <div class="card">
+                  <div class="image-container">
+                    <img src="https://miro.medium.com/v2/resize:fit:1400/1*Xqs3ofPuELgPCiazCZPedA.png" alt="Multan">
+                  </div>
+                  <hr>
+                  <button class="city-button">Multan</button>
+                </div>
+            
+                <div class="card">
+                  <div class="image-container">
+                    <img src="https://cdn-blog.zameen.com/blog/wp-content/uploads/2019/11/cover-image-13.jpg" alt="Murree">
+                  </div>
+                  <hr>
+                  <button class="city-button">Murree</button>
+                </div>
+            
+                <div class="card">
+                  <div class="image-container">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc8-biVvexzK7RiDj5P7v5Ib74d78vITRU6PrWeq0AFRoJAiCBCJmw3zXCQCALcWCXlNI&usqp=CAU" alt="Okara">
+                  </div>
+                  <hr>
+                  <button class="city-button">Okara</button>
+                </div>
+            
+                <div class="card">
+                  <div class="image-container">
+                    <img src="https://flypakistan.pk/assets/img/blog/Best%20Places%20To%20Visit%20In%20Chiniot,%20Pakistan%20-%20Unveiling%20The%20Hidden%20Gems.jpg" alt="Chiniot">
+                  </div>
+                  <hr>
+                  <button class="city-button">Chiniot</button>
+                </div>
+            
+              </div>
+            </div>
+
+        </section>
+
+        <br><br><br>
+     
+        <!-- Container-10 -->
+        <section class="cont-10">
+            <div class="cont-10-main">
+                <div class="cont-10-text-contain">
+                    <h1>Feed your team.</h1>
+                    <p>Treat your talented team to their favourite meals. Let them pick! Explore flexible corporate food delivery options and tasty employee perks.</p>
+                    <button class="learn-more">Learn more</button>
+                </div>
+                <div class="cont-10-img">
+                    <img style="width: 100%;" src="https://www.foodpanda.com/wp-content/uploads/2023/02/foodpanda-home-2-1024x576.jpg">
+                </div>
+            </div>
+        </section>
+
+        <!-- Container-11 -->
+        <footer class="footer">
+            <div class="footer-contain">
+                <div class="footer-logos">
+                    <div class="footer-foodpanda-logo">
+                        <img style="border-radius: 6px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf71T5iisdx7foaXb8GtDjiE6Wy0WrBXl-lg&s">
+                        <a style="color: #ff2b85;" href='/'>Food Panda</a>
+                    </div>
+                    <div class="delivery-logo">
+                        <!-- <img src="images/deliveryicon.svg"> -->
+                    </div>
+                </div>
+                <p style="text-align: center;">© 2025 All rights reserved by Muhammad Ayan Zameer</p>
+                <div class="footer-icons">
+                    <div class="icon">
+                        <a href="https://www.instagram.com/ayan_esthetics/" target="_blank"><img src="https://6807b06cfc1f2708ebecfe3f--huzi-foodpoint.netlify.app/images/instagram.svg"></a>
+                        <a href="https://www.facebook.com/profile.php?id=61568456416131" target="_blank"><img style="width: 28px;" src="https://cdn.freebiesupply.com/images/large/2x/facebook-logo-circle-black-transparent.png"></a>
+                    </div>
+                    <div class="icon">
+                        <!-- <a href="https://www.facebook.com/" target="_blank"><img src="images/facbook.svg"></a> -->
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="firebase.js"></script>
+    <script type="module" src="script.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
