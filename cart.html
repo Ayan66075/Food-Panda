@@ -8,123 +8,113 @@
     <link rel="stylesheet" href="style.css">
   <style>
     .cart-item {
-        width: 50%;
-        margin: 0 auto;
-        text-align: center;
-      }
-  
-      .cart-item img {
-        width: 800px;
-        border-radius: 18px;
-        max-width: 200px;
-        height: auto;
-      }
-  
-      .cart-item h3 {
-        font-size: 1.5rem;
-        margin-top: 10px;
-        color: #ff2b85;
-        font-weight: bold;
-      }
-  
-      .cart-item p {
-      padding: 15px;
-      border: 1px solid #ddd;
-      width: 200px;
-      margin: auto;
-      margin-bottom: 15px;
-      border-radius: 8px;
-      background-color: #f9f9f9;
-    }
-  
-    .quantity-control {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-top: 10px;
-    }
-  
-    .quantity-control button {
-      width: 30px;
-      height: 30px;
-      font-size: 18px;
-      background-color: #3498db;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: 0.2s ease;
-    }
-  
-    .quantity-control button:hover {
-      background-color: #2980b9;
-    }
-  
-    .quantity {
-      font-size: 16px;
-      font-weight: bold;
-      min-width: 20px;
-      text-align: center;
-    }
+  width: 90%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
 
+.cart-item img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 18px;
+  margin: 10px 0;
+}
 
-    .cart-item {
-    padding: 15px;
-    border: 1px solid #ddd;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    background-color: #f9f9f9;
+.cart-item h3 {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  color: #ff2b85;
+  font-weight: bold;
+}
+
+.cart-item p {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  margin: 10px auto;
+  width: 90%;
+  max-width: 250px;
+  font-size: 1rem;
+}
+
+.quantity-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.quantity-control button {
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  background-color: #ff2b85;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.quantity-control button:hover {
+  background-color: #e21b70;
+}
+
+.quantity {
+  font-size: 16px;
+  font-weight: bold;
+  min-width: 20px;
+  text-align: center;
+}
+
+.item-total {
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.remove-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.remove-btn:hover {
+  background-color: #c0392b;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .cart-item {
+    width: 95%;
+    padding: 10px;
   }
 
-  .quantity-control {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin: 10px 0;
+  .cart-item h3 {
+    font-size: 1.2rem;
   }
 
-  .quantity-control button {
-    margin: auto;
-    width: 30px;
-    height: 30px;
-    font-size: 18px;
-    background-color: #ff2b85;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: 0.2s ease;
-  }
-
-  .quantity-control button:hover {
-    background-color: #e21b70;
-  }
-
-  .quantity {
-    font-size: 16px;
-    font-weight: bold;
-    min-width: 20px;
-    text-align: center;
-  }
-
-  .item-total {
-    font-weight: bold;
-    margin-top: 8px;
+  .cart-item p {
+    font-size: 0.95rem;
+    padding: 8px;
   }
 
   .remove-btn {
-    background-color: #e74c3c;
-    color: white;
-    border: none;
-    padding: 6px 12px;
-    border-radius: 6px;
-    cursor: pointer;
-    margin-top: 10px;
+    width: 100%;
   }
-
-  .remove-btn:hover {
-    background-color: #c0392b;
-  }
+}
   </style>
   
   <title>Your Cart</title>
