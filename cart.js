@@ -36,17 +36,20 @@ async function displayCartItems() {
     const totalPrice = item.price;
 
     itemDiv.innerHTML = `
-      <h3>${item.name}</h3>
-      <p>Price: ${item.price}</p>
-      <img width="20%" src="${item.image_url}" alt="${item.name}" class="item-image">
-      <div class="quantity-control">
-        <button class="decrease-btn">–</button>
-        <span class="quantity">${quantity}</span>
-        <button class="increase-btn">+</button>
-      </div>
-      <p class="item-total">Total: <span class="total-price">${totalPrice}</span></p>
-      <button class="remove-btn">Remove</button>
-      <hr>
+    <div class="cart-item">
+  <h3>${item.name}</h3>
+  <p>Price: ${item.price}</p>
+  <img src="${item.image_url}" alt="${item.name}">
+  <div class="quantity-control">
+    <button class="decrease-btn">–</button>
+    <span class="quantity">${quantity}</span>
+    <button class="increase-btn">+</button>
+  </div>
+  <p class="item-total">Total: <span class="total-price">${totalPrice}</span></p>
+  <br>
+  <hr>
+  <button class="remove-btn">Remove</button>
+</div>
     `;
 
     cartContainer.appendChild(itemDiv);
